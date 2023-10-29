@@ -1,6 +1,10 @@
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 
 export default function SignIn() {
+
+const navigation = useNavigation()
+
   return (
     <View style={styles.container}>
       <View style={styles.content}>
@@ -9,7 +13,7 @@ export default function SignIn() {
           <TextInput placeholderTextColor="#999" placeholder='E-mail' style={styles.input} />
           <TextInput placeholderTextColor="#999" placeholder='Senha' style={styles.input} />
           <TouchableOpacity style={styles.button1}>
-            <Text style={styles.textButton1}>
+            <Text onPress={() => navigation.navigate({name: "tabroutes"})} style={styles.textButton1}>
               Acessar
             </Text>
           </TouchableOpacity>

@@ -1,4 +1,4 @@
-import Routes from './routes/Routes';
+import TabRoutes from './routes/tab.routes';
 import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer, ThemeProvider } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -12,18 +12,18 @@ export default function App() {
       <StatusBar style='dark' />
       <NavigationContainer>
         <Stack.Navigator
-          initialRouteName='SignIn'
+          initialRouteName='signin'
           screenOptions={{
             headerShown : false
           }}
           >
           <Stack.Screen
-            name='SignIn'
+            name='signin'
             component={SignIn}
           />
           <Stack.Screen
-            name='Routes'
-            component={Routes}
+            name='tabroutes'
+            component={TabRoutes}
           />
         </Stack.Navigator>
       </NavigationContainer>
